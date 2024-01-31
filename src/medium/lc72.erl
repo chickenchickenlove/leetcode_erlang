@@ -37,6 +37,7 @@ sol(W1, W2, I1, I2, DP) ->
   {NewT1, UpdatedDp}.
 
 handle_none_case(W1, W2, I1, I2, DP) ->
+  1,
   case maps:get(I1, W1) =:= maps:get(I2, W2) of
     true -> sol(W1, W2, I1-1, I2-1, DP);
     _ -> handle_diff_case(W1, W2, I1, I2, DP)
